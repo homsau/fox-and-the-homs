@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kylewhittemore/full-stack-sequelize.git"
+    "url": "git+https://github.com/homsau/fox-and-the-homs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kylewhittemore/full-stack-sequelize/issues"
+    "url": "https://github.com/homsau/fox-and-the-homs/issues"
   },
-  "homepage": "https://github.com/kylewhittemore/full-stack-sequelize#readme",
+  "homepage": "https://github.com/homsau/fox-and-the-homs#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
