@@ -15,3 +15,20 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import { App, Page, Section, Hero, Navbar, HorizontalSplit } from "neal-react";
+ 
+// ReactDOM.render((
+//   <App>
+//     <Page>
+//       <Navbar brand="hello"></Navbar>
+//       <Hero className="text-center"> <h1>Hello World</h1> </Hero>
+//       <Section heading="Hello!">
+//         <HorizontalSplit padding="md"></HorizontalSplit>
+//       </Section>
+//       { /* More ... */ }
+//     </Page>
+//   </App>
+// ), document.getElementById("root"));
