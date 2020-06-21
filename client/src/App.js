@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import about_us_banner from './images/about_us_banner.jpg';
+import james_headshot from './images/james_headshot.jpg';
+import becky_headshot from './images/becky_headshot.jpg';
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
@@ -47,12 +50,12 @@ class App extends React.Component {
           <Button className='align-self-end'>Explore<br />v</Button>
         </div>
       </div>
-
+      <img id='about_us' src={about_us_banner} />
       <div className='container-fluid about-us'>
         <h2>About Us</h2>
         <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={james_headshot} />
             <Card.Body>
               <Card.Title>James Powell Cowart</Card.Title>
               <Card.Text>
@@ -62,7 +65,7 @@ class App extends React.Component {
             </Card.Body>
           </Card>
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src={becky_headshot} />
             <Card.Body>
               <Card.Title>Rebecca Lynn Cunningham</Card.Title>
               <Card.Text>

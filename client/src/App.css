@@ -33,6 +33,16 @@
 .countdown-container {
   background-color: green;
 }
+.container-fluid.timeline {
+  max-width: 100%;
+  padding: 0;
+}
+.container-fluid.timeline .timeline {
+  max-width: 80%;
+}
+img#about_us {
+  width: 100%;
+}
 
 
 
