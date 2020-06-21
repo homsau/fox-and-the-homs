@@ -17,9 +17,9 @@ class App extends React.Component {
   //   this.render = this.renderSeparator.bind(this);
   // }
 
-  componentDidMount () {
+  componentDidMount = () => {
     const script = document.createElement("script");
-    script.src = './components/Timeline.js';
+    script.src = './Timeline.js';
     script.async = true;
     document.body.appendChild(script);
   }
@@ -71,6 +71,33 @@ class App extends React.Component {
               {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
           </Card>
+        </div>
+      </div>
+
+      <div className='container-fluid'>
+        <h2>Our Fur Babies</h2>
+        <div class="card mb-3">
+          <img src="..." class="card-img-top" alt="..." />
+          <div class="card-body">
+            <div className="container-fluid d-flex justify-content-around">
+              <div>
+                <span>Evey</span>
+                <p>nickname</p>
+              </div>
+              <div>
+                <span>Simon</span>
+                <p>nickname</p>
+              </div>
+              <div>
+                <span>Oliver</span>
+                <p>nickname</p>
+              </div>
+              <div>
+                <span>Boots</span>
+                <p>nickname</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -164,6 +191,16 @@ class App extends React.Component {
         </div>
         <div className="demo-footer"><a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank">Source/Kaynak</a></div>
     </div>
+
+    <div className='container-fluid favorites'>
+      <h2>Our Top Fives</h2>
+
+    </div>
+
+    <div className='container-fluid'>
+      
+    </div>
+
   </div>
 
   );
