@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
@@ -6,11 +6,16 @@ import Countdown from './components/Countdown.js';
 import { Button, Card } from 'react-bootstrap';
 import './App.css';
 
-class App extends React.Component() {
+class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     live: false
+  //   }
+  //   this.componentDidMount = this.renderSeparator.bind(this);
+  //   this.render = this.renderSeparator.bind(this);
+  // }
 
   componentDidMount () {
     const script = document.createElement("script");
