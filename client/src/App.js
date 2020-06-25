@@ -4,6 +4,7 @@ import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
 import { Button, Card } from 'react-bootstrap';
+import RSVP from './components/RSVP.js';
 import './App.css';
 
 class App extends React.Component {
@@ -49,28 +50,47 @@ class App extends React.Component {
       </div>
 
       <div className='container-fluid about-us'>
-        <h2>About Us</h2>
+        {/* <h2>About Us</h2> */}
         <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>James Powell Cowart</Card.Title>
-              <Card.Text>
-                Top notch dude. 
-              </Card.Text>
-              {/* <Button variant="primary">Go somewhere</Button> */}
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>Rebecca Lynn Cunningham</Card.Title>
-              <Card.Text>
-                Pretty swell gal. 
-              </Card.Text>
-              {/* <Button variant="primary">Go somewhere</Button> */}
-            </Card.Body>
-          </Card>
+          <div>
+            <h2>About the Bride</h2>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Rebecca Lynn Cunningham</Card.Title>
+                <Card.Text>
+                  <p>fiancee: &#123;</p>
+                  <p>occupation: Web Developer;</p>
+                  <p>age: 27;</p>
+                  <p>birthday: June 10;</p>
+                  <p>jokes: puns;</p>
+                  <p>strength: love;</p>
+                  <p>&#125;</p> 
+                </Card.Text>
+                {/* <Button variant="primary">Go somewhere</Button> */}
+              </Card.Body>
+            </Card>
+          </div>
+          
+          <div>
+            <h2>About the Groom</h2>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>James Powell Cowart</Card.Title>
+                <Card.Text>
+                  <p>fiance: &#123;</p>
+                  <p>occupation: Web Developer;</p>
+                  <p>age: 30;</p>
+                  <p>birthday: January 21;</p>
+                  <p>jokes: movie references;</p>
+                  <p>strength: honesty;</p>
+                  <p>&#125;</p>
+                </Card.Text>
+                {/* <Button variant="primary">Go somewhere</Button> */}
+              </Card.Body>
+            </Card>
+          </div>
         </div>
       </div>
 
@@ -102,6 +122,7 @@ class App extends React.Component {
       </div>
 
       <div className='container-fluid timeline'>
+      <h2>Our Story</h2>
       <div className="timeline-container" id="timeline-1">
             <div className="timeline-header">
                 <h2 className="timeline-header__title">Mustafa Kemal Atatürk</h2>
@@ -192,13 +213,32 @@ class App extends React.Component {
         <div className="demo-footer"><a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank">Source/Kaynak</a></div>
     </div>
 
-    <div className='container-fluid favorites'>
-      <h2>Our Top Fives</h2>
+    <div className='container-fluid registry'>
+      <h2>Registry</h2>
+      <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
+          <div>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+            </Card>
+          </div>
+          
+          <div>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+            </Card>
+          </div>
+        </div>
+    </div>
+
+    <div className='container-fluid rsvp'>
+      <h2>RSVP</h2>
+      <RSVP />
 
     </div>
 
-    <div className='container-fluid'>
-      
+    <div className='container-fluid favorites'>
+      <h2>Our Faves</h2>
+
     </div>
 
   </div>
