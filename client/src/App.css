@@ -29,7 +29,6 @@
 }
 
 
-
 .countdown-container {
   background-color: green;
 }
@@ -60,18 +59,24 @@ img#about_us {
 .timeline__content-title {
   font-weight: normal;
   font-size: 66px;
-  margin: -10px 0 0 0;
+  margin: -30px 0 0 0;
   transition: 0.4s;
   padding: 0 10px;
   box-sizing: border-box;
   font-family: 'Pathway Gothic One', sans-serif;
   color: #fff;
 }
+h2.timeline__content-title {
+  font-size: 66px;
+}
+h3.timeline__content-title {
+  font-size: 44px;
+}
 .timeline__content-desc {
   margin: 0;
-  font-size: 15px;
+  font-size: 18px;
   box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
   font-family: Cardo;
   font-weight: normal;
   line-height: 25px;
@@ -83,7 +88,7 @@ img#about_us {
   height: 100%;
   margin-left: -1px;
   content: "";
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.5);
 }
 @media only screen and (max-width: 767px) {
   .timeline:before {
@@ -106,8 +111,9 @@ img#about_us {
   letter-spacing: 3px;
   width: 100%;
   position: absolute;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  text-transform: uppercase;
   font-family: 'Pathway Gothic One', sans-serif;
   border-left: 2px solid rgba(255, 255, 255, 0.5);
   top: 70%;
@@ -139,7 +145,7 @@ img#about_us {
   opacity: 1;
 }
 .timeline-item--active .timeline__content-title {
-  margin: -50px 0 20px 0;
+  margin: 30px 0 10px 0;
 }
 @media only screen and (max-width: 767px) {
   .timeline-item {
@@ -159,6 +165,9 @@ img#about_us {
     padding-bottom: 40px;
   }
 }
+.timeline__img:nth-child(1) {
+  display: none;
+}
 .timeline__img {
   max-width: 100%;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
@@ -177,7 +186,7 @@ img#about_us {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(99, 99, 99, 0.8);
+  background: rgba(99, 99, 99, 0.5);
   content: "";
 }
 .timeline-header {
@@ -196,7 +205,7 @@ img#about_us {
 .timeline-header__subtitle {
   color: rgba(255, 255, 255, 0.5);
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 5px;
   margin: 10px 0 0 0;
   font-weight: normal;
