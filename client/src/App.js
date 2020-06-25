@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import about_us_banner from './images/about_us_banner.jpg';
+import james_headshot from './images/james_headshot.jpg';
+import becky_headshot from './images/becky_headshot.jpg';
+import beach_feet from './images/beach_feet.jpg';
+import gt_image from './images/gt_image.jpg';
+import gt_graduation from './images/gt_graduation.jpg'; // bg pic
+import gt_graduation_night from './images/gt_graduation_night.jpg'; // front pic
+import first_app from './images/first_app.jpg'; //f ront pic
+import amicalola from './images/amicalola.jpg'; // front pic
+import lunar_eclipse from './images/lunar_eclipse.jpg'; // bg pic
+
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
@@ -48,7 +59,7 @@ class App extends React.Component {
           <Button className='align-self-end'>Explore<br />v</Button>
         </div>
       </div>
-
+      <img id='about_us' src={about_us_banner} />
       <div className='container-fluid about-us'>
         {/* <h2>About Us</h2> */}
         <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
@@ -125,34 +136,46 @@ class App extends React.Component {
       <h2>Our Story</h2>
       <div className="timeline-container" id="timeline-1">
             <div className="timeline-header">
-                <h2 className="timeline-header__title">Mustafa Kemal Atatürk</h2>
-                <h3 className="timeline-header__subtitle">FATHER OF THE TURKS</h3>
+                <h2 className="timeline-header__title">James and Becks</h2>
+                <h3 className="timeline-header__subtitle">NERDS</h3>
             </div>
             <div className="timeline">
-                <div className="timeline-item" data-text="FATHER OF THE TURKS">
-                    <div className="timeline__content"><img className="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg" />
-                        <h2 className="timeline__content-title">1881</h2>
-                        <p className="timeline__content-desc">He was born in 1881 probably in the spring in Salonica, then an Ottoman city, now in Greece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
+                <div className="timeline-item" data-text="April 2018">
+                    <div className="timeline__content">
+                      <img className="timeline__img" src={beach_feet} /> 
+                      <img className="timeline__img" src={gt_image} /> 
+                        <h3 className="timeline__content-title">The Day We Met</h3>
+                        <p className="timeline__content-desc"><strong>At Georgia Tech</strong></p>
+                        <p className="timeline__content-desc">We were the last two people to leave the orientation for our coding class and left the building together.</p>
                     </div>
                 </div>
-                <div className="timeline-item" data-text="FATHER OF THE TURKS">
-                    <div className="timeline__content"><img className="timeline__img" src="http://gazetemanifesto.com/wp-content/uploads/2015/11/mustafa-kemal.jpg" />
-                        <h2 className="timeline__content-title">1893</h2>
-                        <p className="timeline__content-desc">First enrolled in a traditionalreligious school, he soon switched to a modern school. In 1893, he entered a military highschool where his mathematics teacher gave him the second name Kemal (meaning perfection)in recognition of young Mustafa's
-                            superior achievement.</p>
+                <div className="timeline-item" data-text="July 2018">
+                    <div className="timeline__content">
+                      <img className="timeline__img" src={beach_feet} />
+                      <img className="timeline__img" src={first_app} />
+                        <h3 className="timeline__content-title">Made Our First App Together</h3>
+                        <p className="timeline__content-desc">State of the World!</p>
+
+                        <p className="timeline__content-desc"><a href='https://github.com/homsau/State-of-the-World' target="_blank">GitHub</a></p>
+
+                        <p className="timeline__content-desc"><a href='https://homsau.github.io/State-of-the-World/' target="_blank">App</a></p>
                     </div>
                 </div>
-                <div className="timeline-item" data-text="FATHER OF THE TURKS">
-                    <div className="timeline__content"><img className="timeline__img" src="http://www.volpeypir.com/upload/3732.jpg" />
-                        <h2 className="timeline__content-title">1905</h2>
-                        <p className="timeline__content-desc">In 1905, Mustafa Kemal graduated from the War Academy in Istanbul with the rank of Staff Captain. Posted in Damascus, he started with several colleagues, a clandestinesociety called "Homeland and Freedom" to fight against the Sultan'sdespotism.</p>
+                <div className="timeline-item" data-text="October 27, 2018">
+                    <div className="timeline__content">
+                      <img className="timeline__img" src={gt_graduation} />
+                      <img className="timeline__img" src={gt_graduation_night} />
+                        <h3 className="timeline__content-title">Graduated as Web Developers</h3>
+                        <p className="timeline__content-desc"><strong>At Georgia Tech</strong></p>
+                        <p className="timeline__content-desc">We crushed it.</p>
                     </div>
                 </div>
-                <div className="timeline-item" data-text="FATHER OF THE TURKS">
-                    <div className="timeline__content"><img className="timeline__img" src="http://cdn.yemek.com/uploads/2014/11/ataturk-10-kasim.jpg" />
-                        <h2 className="timeline__content-title">1908</h2>
-                        <p className="timeline__content-desc">In 1908 he helped the group of officers who toppled the Sultan. Mustafa Kemal'scareer flourished as he won his heroism in the far corners of the Ottoman Empire,including Albania and Tripoli. He also briefly served as a staff officer in
-                            Salonica andIstanbul and as a military attache in Sofia.</p>
+                <div className="timeline-item" data-text="January 21,2019">
+                    <div className="timeline__content">
+                      <img className="timeline__img" src={lunar_eclipse} />
+                      <img className="timeline__img" src={amicalola} />
+                        <h3 className="timeline__content-title">Birthday / First Hike and Vacation</h3>
+                        <p className="timeline__content-desc">Amicalola Falls, Super Blood Moon w/ Lunar Eclipse</p>
                     </div>
                 </div>
                 <div className="timeline-item" data-text="FATHER OF THE TURKS">
