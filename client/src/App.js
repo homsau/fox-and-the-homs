@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import hdr_home from './images/hdr_home.jpg';
 import about_us_banner from './images/about_us_banner.jpg';
+
 import james_headshot from './images/james_headshot.jpg';
 import becky_headshot from './images/becky_headshot.jpg';
 import beach_feet from './images/beach_feet.jpg';
@@ -39,10 +41,12 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <Hero backgroundImage='https://via.placeholder.com/1600x900' >
-        <span>01 + 01 = 10</span>
-        <br />
-        <span>We're getting married!!!</span>
+      <Hero id='home' className='home' backgroundImage={hdr_home} >
+        <div>
+          <h2>01 + 01 = 10</h2>
+          <br />
+          <h2>We're getting married!!!</h2>
+        </div>
       </Hero>
 
       <div className='container-fluid countdown-container'>
