@@ -4,6 +4,7 @@ import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
 import { Button, Card } from 'react-bootstrap';
+import RSVP from './components/RSVP.js';
 import './App.css';
 
 class App extends React.Component {
@@ -58,7 +59,13 @@ class App extends React.Component {
               <Card.Body>
                 <Card.Title>Rebecca Lynn Cunningham</Card.Title>
                 <Card.Text>
-                  Pretty swell gal. 
+                  <p>fiancee: &#123;</p>
+                  <p>occupation: Web Developer;</p>
+                  <p>age: 27;</p>
+                  <p>birthday: June 10;</p>
+                  <p>jokes: puns;</p>
+                  <p>strength: love;</p>
+                  <p>&#125;</p> 
                 </Card.Text>
                 {/* <Button variant="primary">Go somewhere</Button> */}
               </Card.Body>
@@ -72,7 +79,13 @@ class App extends React.Component {
               <Card.Body>
                 <Card.Title>James Powell Cowart</Card.Title>
                 <Card.Text>
-                  Top notch dude. 
+                  <p>fiance: &#123;</p>
+                  <p>occupation: Web Developer;</p>
+                  <p>age: 30;</p>
+                  <p>birthday: January 21;</p>
+                  <p>jokes: movie references;</p>
+                  <p>strength: honesty;</p>
+                  <p>&#125;</p>
                 </Card.Text>
                 {/* <Button variant="primary">Go somewhere</Button> */}
               </Card.Body>
@@ -217,8 +230,14 @@ class App extends React.Component {
         </div>
     </div>
 
+    <div className='container-fluid rsvp'>
+      <h2>RSVP</h2>
+      <RSVP />
+
+    </div>
+
     <div className='container-fluid favorites'>
-      <h2>Our Top Fives</h2>
+      <h2>Our Faves</h2>
 
     </div>
 
