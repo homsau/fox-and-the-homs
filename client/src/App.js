@@ -4,6 +4,7 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 // import logo from './logo.svg';
 import hdr_home from './images/hdr_home.jpg';
+import hdr_james_becks from './images/hdr_james_becks.png';
 import about_us_banner from './images/about_us_banner.jpg';
 import james_headshot from './images/james_headshot.jpg';
 import becky_headshot from './images/becky_headshot.jpg';
@@ -47,6 +48,7 @@ class App extends React.Component {
     <div className="App">
       <Hero id='home' className='home' backgroundImage={hdr_home} >
         <div>
+          <img src={hdr_james_becks} width="200px" alt="" />
           <h2>01 + 01 = 10</h2>
           <br />
           <h2>We're getting married!!!</h2>
@@ -62,22 +64,17 @@ class App extends React.Component {
 
       <div id='countdown' className='hero-menu'>
         <div className='container-fluid countdown-container'>
+          <h2 className='title'>Countdown</h2>
           <Countdown />
         </div>
-
+      </div>
+      
+      <div className='hero-row container-fluid d-flex justify-content-center'>
         <div>
-          <div className='hero-row container-fluid d-flex py-4 justify-content-around'>
-            <div>
-              <AnchorLink href='#rsvp'><Button className='align-self-center'>RSVP</Button></AnchorLink>
-            </div>
-            <div>
-              <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
-            </div>
-          </div>
-
-          {/* <div className='menu-row container-fluid d-flex py-4 justify-content-around'>
-            <AnchorLink href='#about_us'><Button className='align-self-end'>Explore<br />v</Button></AnchorLink>
-          </div> */}
+          <AnchorLink href='#rsvp'><Button className='align-self-center'>RSVP</Button></AnchorLink>
+        </div>
+        <div>
+          <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
         </div>
       </div>
       
@@ -196,7 +193,7 @@ class App extends React.Component {
                     <div className="timeline__content">
                       <img className="timeline__img" src={lunar_eclipse} alt="..." />
                       <img className="timeline__img" src={amicalola} alt="..." />
-                        <h3 className="timeline__content-title">Birthday / First Hike and Vacation</h3>
+                        <h3 className="timeline__content-title">Birthday Adventure</h3>
                         <p className="timeline__content-desc">Amicalola Falls, Super Blood Moon w/ Lunar Eclipse</p>
                     </div>
                 </div>

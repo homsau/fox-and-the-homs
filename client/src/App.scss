@@ -13,7 +13,7 @@ $arrow-line-width: 5px;
   width: 100px;
   height: 60px;  
   position: absolute;
-  top: 90%;
+  top: calc(90% - 40px);
   left: 50%;
   @include arrow-transitions(0deg);
   &:hover {
