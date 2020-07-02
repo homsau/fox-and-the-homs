@@ -81,29 +81,46 @@ class Countdown extends Component {
         <span className="Countdown-col">
           <span className="Countdown-col-element">
               <strong>{this.addLeadingZeros(countDown.days)}</strong>
-              <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+              <span>{countDown.days === 1 ? 'Day' : 'Day(s)'}</span>
           </span>
         </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
+              <strong>:</strong>
+          </span>
+        </span>
+        
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
             <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span>Hours</span>
+            <span>Hour(s)</span>
           </span>
         </span>
 
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
+              <strong>:</strong>
+          </span>
+        </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
             <strong>{this.addLeadingZeros(countDown.min)}</strong>
-            <span>Min</span>
+            <span>Minute(s)</span>
           </span>
         </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
+              <strong>:</strong>
+          </span>
+        </span>
+        
+        <span className="Countdown-col">
+          <span className="Countdown-col-element">
             <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span>Sec</span>
+            <span>Sec(x)</span>
           </span>
         </span>
       </div>
