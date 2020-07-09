@@ -17,29 +17,31 @@ import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
 import { Button, Card } from 'react-bootstrap';
+import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVP from './components/RSVP.js';
 //import RegistryItem from './components/RegistryItem.js'
 import './App.css';
 
 class App extends React.Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     live: false
-  //   }
-  //   this.componentDidMount = this.renderSeparator.bind(this);
-  //   this.render = this.renderSeparator.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      live: false,
+      modalShow: false
+    }
+
+  }
 
   componentDidMount = () => {
     const script = document.createElement("script");
     script.src = './Timeline.js';
     script.async = true;
     document.body.appendChild(script);
-  }
+  }    
 
   render() {
+   //const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="App">
       <Hero id='home' className='home' backgroundImage={hdr_home} >
@@ -56,8 +58,28 @@ class App extends React.Component {
 
       <div>
         <div className='container-fluid d-flex py-4 justify-content-around'>
-          <Button className='align-self-center'>RSVP</Button>
-          <Button className='align-self-center'>Registry</Button>
+
+    <>
+      <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
+        RSVP
+      </Button>
+
+      <VerticallyCenteredModal
+        show={this.state.modalShow}
+        onHide={() => this.setState({modalShow: false})}
+      />
+    </>
+
+    <>
+      <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
+        Registry
+      </Button>
+
+      <VerticallyCenteredModal
+        show={this.state.modalShow}
+        onHide={() => this.setState({modalShow: false})}
+      />
+    </>
         </div>
 
         <div className='container-fluid d-flex py-4 justify-content-around'>
