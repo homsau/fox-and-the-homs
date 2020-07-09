@@ -18,6 +18,7 @@ import Hero from './components/Hero.js';
 import Countdown from './components/Countdown.js';
 import { Button, Card } from 'react-bootstrap';
 import RSVP from './components/RSVP.js';
+//import RegistryItem from './components/RegistryItem.js'
 import './App.css';
 
 class App extends React.Component {
@@ -237,24 +238,26 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
-        <div className="demo-footer"><a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank">Source/Kaynak</a></div>
     </div>
 
     <div className='container-fluid registry'>
       <h2>Registry</h2>
       <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
-          <div>
+        <div>
+            <a target='_blank' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={'https://www.bedbathandbeyond.com/static/assets/images/bbb-logo.svg'} />
             </Card>
-          </div>
-          
-          <div>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-            </Card>
-          </div>
+            </a>
         </div>
+        <div>
+            <a target='_blank' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={'https://www.bedbathandbeyond.com/static/assets/images/bbb-logo.svg'} />
+            </Card>
+            </a>
+        </div>
+      </div>
     </div>
 
     <div className='container-fluid rsvp'>
