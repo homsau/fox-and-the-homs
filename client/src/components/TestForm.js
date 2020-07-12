@@ -1,50 +1,39 @@
 import React, { Component } from "react";
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import fs from "fs";
-
 
 export default class RSVP extends React.Component {
     constructor() {
         super()
         this.state = {
-            submitted: false
+            submitted: false,
+            names: "",
+            number: "",
+            rsvp: "",
+            resume: "",
         }
     }
 
-    handleSubmit() {
-        // Next, we store the text given to us from the command line.
-        let text;
+    handleInputChange(event) {
+        event.preventDefault();
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
 
-        // Next, we append the text into the "sample.txt" file.
-        // If the file didn't exist, then it gets created on the fly.
-        fs.appendFile("sample.txt", text, function(err) {
-
-        // If an error was experienced we will log it.
-        if (err) {
-            console.log(err);
-        }
-
-        // If no error is experienced, we'll log the phrase "Content Added" to our node console.
-        else {
-            console.log("Content Added!");
-        }
-
-        });
+    this.setState({ [name]: value });
     }
-
 
     render() {
         return(
             <div>
-                <Form className="d-flex flex-column align-items-left" onSubmit={this.handleSubmit}>
-                <Form.Group as={Row} controlId="formHorizontalName">
-                    <Form.Label column sm={2}>
-                    Names of Attendees
-                    </Form.Label>
-                    <Col sm={10}>
-                    <Form.Control type="name" placeholder="Names of all Attendees" />
-                    </Col>
-                </Form.Group>
+                <Form onSubmit={this.handleInputChange} className="d-flex flex-column align-items-left">
+                    <Form.Group as={Row} controlId="formHorizontalName">
+                        <Form.Label column sm={2}>
+                        Names of Attendees
+                        </Form.Label>
+                        <Col sm={10}>
+                        <Form.Control type="name" placeholder="Names of all Attendees" />
+                        </Col>
+                    </Form.Group>
 
                     <Form.Group as={Row} controlId="formHorizontalPassword">
                         <Form.Label column sm={2}>

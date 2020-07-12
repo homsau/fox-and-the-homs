@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+/* BUTTON */
+.btn-primary {
+  background-color: #EE7C18;
+  border: #EE7C18 2px solid;
+  border-radius: 3px;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+}
+.btn-primary:hover {
+  background-color: #EE7C18;
+  border: #560410 2px solid;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+}
+/* END */
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .home {
   height: 100vh;
   background-size: cover;
@@ -41,8 +62,29 @@
   align-items: center;
   padding: 0 40px;
 }
+#countdown {
+  min-height: 100px;
+  background-color: rgba(235, 227, 217, 0.75);
+}
+#countdown h2.title {
+  color: #560410;
+}
 .countdown-container {
-  background-color: green;
+  display: block;
+}
+.countdown-container > div > span {
+  padding: 0 15px;
+  color: #560410;
+  font-weight: 500;
+  display: inline-flex;
+}
+.countdown-container span > strong {
+  padding: 0 4px;
+  color: #ee7c18;
+  display: block;
+}
+.countdown-container h2 {
+  text-align: center;
 }
 .container-fluid.timeline {
   max-width: 100%;
@@ -54,7 +96,29 @@
 img#about_us {
   width: 100%;
 }
-
+.bio-card {
+  width: 80%;
+  margin: auto;
+}
+.hero-row {
+  background-color: rgba(235,227,217,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-row a {
+  padding: 0 20px;
+}
+.hero-row > div:nth-child(2) {
+  display: block !important;
+  position: relative;
+}
+.about-us {
+  
+}
+.fur-babies {
+  background-color: rgba(235,227,217,0.75);
+}
 
 
 
