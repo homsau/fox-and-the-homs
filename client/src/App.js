@@ -24,30 +24,36 @@ import Hero from './components/Hero.js';
 import Countdown from './components/Countdown.js';
 import CardFlip from './components/CardFlip.js';
 import { Button, Card } from 'react-bootstrap';
+import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVP from './components/RSVP.js';
+<<<<<<< HEAD
+//import RegistryItem from './components/RegistryItem.js'
+=======
 import TestForm from './components/TestForm.js';
+>>>>>>> b33d8844e8b5e9827df89a4dd2dac78f6d795214
 import './App.css';
 import './App.scss';
 
 class App extends React.Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     live: false
-  //   }
-  //   this.componentDidMount = this.renderSeparator.bind(this);
-  //   this.render = this.renderSeparator.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      live: false,
+      modalShow: false
+    }
+
+  }
 
   componentDidMount = () => {
     const script = document.createElement("script");
     script.src = './Timeline.js';
     script.async = true;
     document.body.appendChild(script);
-  }
+  }    
 
   render() {
+   //const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="App">
       <Hero id='home' className='home' backgroundImage={hdr_home} >
@@ -72,10 +78,38 @@ class App extends React.Component {
           <Countdown />
         </div>
       </div>
+<<<<<<< HEAD
+
+      <div>
+        <div className='container-fluid d-flex py-4 justify-content-around'>
+
+    <>
+      <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
+        RSVP
+      </Button>
+
+      <VerticallyCenteredModal
+        show={this.state.modalShow}
+        onHide={() => this.setState({modalShow: false})}
+      />
+    </>
+
+    <>
+      <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
+        Registry
+      </Button>
+
+      <VerticallyCenteredModal
+        show={this.state.modalShow}
+        onHide={() => this.setState({modalShow: false})}
+      />
+    </>
+=======
       
       <div className='hero-row container-fluid d-flex justify-content-center section'>
         <div>
           <AnchorLink href='#rsvp'><Button className='align-self-center'>RSVP</Button></AnchorLink>
+>>>>>>> b33d8844e8b5e9827df89a4dd2dac78f6d795214
         </div>
         <div>
           <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
@@ -170,18 +204,21 @@ class App extends React.Component {
     <div id='registry' className='container-fluid registry section'>
       <h2>Registry</h2>
       <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
-          <div>
+        <div>
+            <a target='_blank' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={'https://www.bedbathandbeyond.com/static/assets/images/bbb-logo.svg'} />
             </Card>
-          </div>
-          
-          <div>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-            </Card>
-          </div>
+            </a>
         </div>
+        <div>
+            <a target='_blank' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={'https://www.bedbathandbeyond.com/static/assets/images/bbb-logo.svg'} />
+            </Card>
+            </a>
+        </div>
+      </div>
     </div>
 
     <div id='rsvp' className='container-fluid rsvp section'>
