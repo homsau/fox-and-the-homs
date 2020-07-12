@@ -5,14 +5,27 @@ export default class RSVP extends React.Component {
     constructor() {
         super()
         this.state = {
-            submitted: false
+            submitted: false,
+            names: "",
+            number: "",
+            rsvp: "",
+            resume: "",
         }
+    }
+
+    handleInputChange(event) {
+        event.preventDefault();
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
+
+    this.setState({ [name]: value });
     }
 
     render() {
         return(
             <div>
-                <Form className="d-flex flex-column align-items-left">
+                <Form onSubmit={this.handleInputChange} className="d-flex flex-column align-items-left">
                     <Form.Group as={Row} controlId="formHorizontalName">
                         <Form.Label column sm={2}>
                         Names of Attendees
