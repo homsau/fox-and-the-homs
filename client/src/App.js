@@ -6,9 +6,11 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import hdr_home from './images/hdr_home.jpg';
 import hdr_james_becks from './images/hdr_james_becks.png';
 import about_us_banner from './images/about_us_banner.jpg';
-import james_headshot from './images/james_headshot.jpg';
-import becky_headshot from './images/becky_headshot.jpg';
-// import evey from './images/evey.jpg';
+// OUR PICS
+// import james_headshot from './images/james_headshot.jpg';
+// import becky_headshot from './images/becky_headshot.jpg';
+// FUR BABIES
+import evey from './images/evey.jpg';
 import beach_feet from './images/beach_feet.jpg';
 import gt_image from './images/gt_image.jpg';
 import gt_graduation from './images/gt_graduation.jpg'; // bg pic
@@ -20,8 +22,10 @@ import lunar_eclipse from './images/lunar_eclipse.jpg'; // bg pic
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
+import CardFlip from './components/CardFlip.js';
 import { Button, Card } from 'react-bootstrap';
 import RSVP from './components/RSVP.js';
+import TestForm from './components/TestForm.js';
 import './App.css';
 import './App.scss';
 
@@ -55,21 +59,21 @@ class App extends React.Component {
         </div>
         <div>
           <AnchorLink className='arrow-container' href='#countdown'>
-            <div class="arrow"></div>
-            <div class="arrow"></div>
-            <div class="arrow"></div>  
+            <span className="arrow"></span>
+            <span className="arrow"></span>
+            <span className="arrow"></span>  
           </AnchorLink>
         </div>
       </Hero>
 
-      <div id='countdown' className='hero-menu'>
+      <div id='countdown' className='hero-menu section'>
         <div className='container-fluid countdown-container'>
           <h2 className='title'>Countdown</h2>
           <Countdown />
         </div>
       </div>
       
-      <div className='hero-row container-fluid d-flex justify-content-center'>
+      <div className='hero-row container-fluid d-flex justify-content-center section'>
         <div>
           <AnchorLink href='#rsvp'><Button className='align-self-center'>RSVP</Button></AnchorLink>
         </div>
@@ -77,60 +81,23 @@ class App extends React.Component {
           <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
         </div>
       </div>
-      
+
       <img id='about_us' src={about_us_banner} alt="..."/>
-      <div className='container-fluid about-us'>
+      <div className='container-fluid about-us section'>
         {/* <h2>About Us</h2> */}
-        <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
-          <div>
-            <h2>About the Bride</h2>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={becky_headshot} />
-              <Card.Body>
-                <Card.Title>Rebecca Lynn Cunningham</Card.Title>
-                <Card.Text>
-                  <p>fiancee: &#123;</p>
-                  <p>occupation: Web Developer;</p>
-                  <p>age: 27;</p>
-                  <p>birthday: June 10;</p>
-                  <p>jokes: puns;</p>
-                  <p>strength: love;</p>
-                  <p>&#125;</p> 
-                </Card.Text>
-                {/* <Button variant="primary">Go somewhere</Button> */}
-              </Card.Body>
-            </Card>
-          </div>
-          
-          <div>
-            <h2>About the Groom</h2>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={james_headshot} />
-              <Card.Body>
-                <Card.Title>James Powell Cowart</Card.Title>
-                <Card.Text>
-                  <p>fiance: &#123;</p>
-                  <p>occupation: Web Developer;</p>
-                  <p>age: 30;</p>
-                  <p>birthday: January 21;</p>
-                  <p>jokes: movie references;</p>
-                  <p>strength: honesty;</p>
-                  <p>&#125;</p>
-                </Card.Text>
-                {/* <Button variant="primary">Go somewhere</Button> */}
-              </Card.Body>
-            </Card>
-          </div>
+        <div className='container-fluid d-flex justify-content-around align-items-center'>
+          <CardFlip />
         </div>
       </div>
 
-      <div className='container-fluid'>
+      <div id='fur_babies' className='fur-babies container-fluid section'>
         <h2>Our Fur Babies</h2>
-        <div class="card mb-3">
-          <img src={"..."} class="card-img-top" alt="..." />
-          <div class="card-body">
+        <div className="card mb-3">
+          {/* <img src={"..."} className="card-img-top" alt="..." /> */}
+          <div className="card-body">
             <div className="container-fluid d-flex justify-content-around">
               <div>
+                <img src={evey} className="card-img-top" alt="..." />
                 <span>Evey</span>
                 <p>nickname</p>
               </div>
@@ -151,12 +118,11 @@ class App extends React.Component {
         </div>
       </div>
 
-      <div className='container-fluid timeline'>
-      <h2>Our Story</h2>
+      <div id='timeline' className='container-fluid timeline section'>
       <div className="timeline-container" id="timeline-1">
             <div className="timeline-header">
-                <h2 className="timeline-header__title">James and Becks</h2>
-                <h3 className="timeline-header__subtitle">NERDS</h3>
+                <h2 className="timeline-header__title">Our Story</h2>
+                <h3 className="timeline-header__subtitle">James and Becks</h3>
             </div>
             <div className="timeline">
                 <div className="timeline-item" data-text="April 2018">
@@ -199,10 +165,9 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
-        <div className="demo-footer"><a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank" rel="noopener noreferrer">Source/Kaynak</a></div>
     </div>
 
-    <div id='registry' className='container-fluid registry'>
+    <div id='registry' className='container-fluid registry section'>
       <h2>Registry</h2>
       <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
           <div>
@@ -219,13 +184,15 @@ class App extends React.Component {
         </div>
     </div>
 
-    <div id='rsvp' className='container-fluid rsvp'>
+    <div id='rsvp' className='container-fluid rsvp section'>
       <h2>RSVP</h2>
-      <RSVP />
+      <a href="mailto:rebeccalynn.awesome@gmail.com">Send us an email because we don't have the form set up yet.</a>
+      <TestForm />
+      {/* <RSVP /> */}
 
     </div>
 
-    <div className='container-fluid favorites'>
+    <div className='container-fluid favorites section'>
       <h2>Our Faves</h2>
 
     </div>
