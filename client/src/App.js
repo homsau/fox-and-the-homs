@@ -26,11 +26,7 @@ import CardFlip from './components/CardFlip.js';
 import { Button, Card } from 'react-bootstrap';
 import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVP from './components/RSVP.js';
-<<<<<<< HEAD
-//import RegistryItem from './components/RegistryItem.js'
-=======
 import TestForm from './components/TestForm.js';
->>>>>>> b33d8844e8b5e9827df89a4dd2dac78f6d795214
 import './App.css';
 import './App.scss';
 
@@ -78,7 +74,6 @@ class App extends React.Component {
           <Countdown />
         </div>
       </div>
-<<<<<<< HEAD
 
       <div>
         <div className='container-fluid d-flex py-4 justify-content-around'>
@@ -104,12 +99,6 @@ class App extends React.Component {
         onHide={() => this.setState({modalShow: false})}
       />
     </>
-=======
-      
-      <div className='hero-row container-fluid d-flex justify-content-center section'>
-        <div>
-          <AnchorLink href='#rsvp'><Button className='align-self-center'>RSVP</Button></AnchorLink>
->>>>>>> b33d8844e8b5e9827df89a4dd2dac78f6d795214
         </div>
         <div>
           <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
