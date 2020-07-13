@@ -18,12 +18,16 @@ import gt_graduation_night from './images/gt_graduation_night.jpg'; // front pic
 import first_app from './images/first_app.jpg'; //f ront pic
 import amicalola from './images/amicalola.jpg'; // front pic
 import lunar_eclipse from './images/lunar_eclipse.jpg'; // bg pic
+import amazon from './images/amazon.png';
+import bed_bath_beyond from './images/bed_bath_beyond.png';
+import lowes from './images/lowes.png';
+import williams_sonoma from './images/williams_sonoma.png';
 
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
 import CardFlip from './components/CardFlip.js';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Col, Row, Container } from 'react-bootstrap';
 import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVP from './components/RSVP.js';
 import TestForm from './components/TestForm.js';
@@ -190,23 +194,41 @@ class App extends React.Component {
         </div>
     </div>
 
-    <div id='registry' className='container-fluid registry section'>
+    <div id='registry' className='registry container-fluid registry section'>
       <h2>Registry</h2>
       <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
-        <div>
-            <a target='_blank' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={'https://www.bedbathandbeyond.com/static/assets/images/bbb-logo.svg'} />
-            </Card>
+      <Container>
+        <Row className="justify-content-md-center">
+          <Col xs={6} md={3}>
+            <a target='_blank' target="_blank" href='#'>
+              <Card>
+                <Card.Img variant="top" src={amazon} />
+              </Card>
             </a>
-        </div>
-        <div>
-            <a target='_blank' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={'https://www.bedbathandbeyond.com/static/assets/images/bbb-logo.svg'} />
-            </Card>
+          </Col>
+          <Col xs={6} md={3}>
+            <a target='_blank' target="_blank" href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
+              <Card>
+                <Card.Img variant="top" src={bed_bath_beyond} />
+              </Card>
             </a>
-        </div>
+          </Col>
+          <Col xs={6} md={3}>
+            <a target='_blank' target="_blank" href='#'>
+              <Card>
+                <Card.Img variant="top" src={lowes} />
+              </Card>
+            </a>
+          </Col>
+          <Col xs={6} md={3}>
+            <a target='_blank' target="_blank" href='#'>
+              <Card>
+                <Card.Img variant="top" src={williams_sonoma} />
+              </Card>
+            </a>
+          </Col>
+        </Row>
+      </Container>
       </div>
     </div>
 

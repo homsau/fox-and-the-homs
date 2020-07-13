@@ -63,7 +63,7 @@ export default class RSVP extends React.Component {
                         <Form.Label as="legend" column sm={2}>
                             RSVP
                         </Form.Label>
-                        <Col sm={10}>
+                        <Col style={{textAlign: 'left'}} sm={10}>
                             <Form.Check
                             type="radio"
                             label="Happily Accept"
@@ -92,14 +92,17 @@ export default class RSVP extends React.Component {
                         </Form.Group>
                     </fieldset>
                     <Form.Group as={Row} controlId="formHorizontalCheck">
-                        <Col sm={{ span: 10, offset: 2 }}>
-                        <Form.File id="exampleFormControlFile1" label="Resume (not required, but encouraged)" />
+                        <Form.Label column sm={2}>
+                            Resume (not required, but encouraged)
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.File id="exampleFormControlFile1" />
                         </Col>
                     </Form.Group>
 
                     <Form.Group as={Row}>
-                        <Col sm={{ span: 10, offset: 2 }}>
-                        <Button type="submit">Submit</Button>
+                        <Col>
+                            <Button type="submit">Submit</Button>
                         </Col>
                     </Form.Group>
                 </Form>

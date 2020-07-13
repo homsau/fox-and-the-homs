@@ -119,6 +119,20 @@ img#about_us {
 .fur-babies {
   background-color: rgba(235,227,217,0.75);
 }
+.registry .card {
+  border: none;
+  width: 80%;
+  max-width: 300px;
+  margin: auto;
+}
+.registry .col-6 {
+  margin-bottom: 40px;
+}
+.registry .container {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 
 
 
