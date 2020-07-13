@@ -31,7 +31,7 @@ import { Button, Card, Col, Row, Container } from 'react-bootstrap';
 import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVP from './components/RSVP.js';
 import TestForm from './components/TestForm.js';
-import './App.css';
+// import './App.css';
 import './App.scss';
 
 class App extends React.Component {
