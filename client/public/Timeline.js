@@ -19,6 +19,11 @@
       var itemLength = selectors.item.length;
       $(window).scroll(function() {
         var max, min;
+        $(document).click(function(event) {
+          console.log("max: " + max);
+          console.log("min: " + min);
+          console.log("itemLength: " + itemLength);
+        });
         var pos = $(this).scrollTop();
         selectors.item.each(function(i) {
           min = $(this).offset().top;
@@ -36,7 +41,7 @@
                 ")"
             );
             selectors.item.last().addClass(selectors.activeClass);
-          } else if (pos <= max - 40 && pos >= min) {
+          } else if (pos + 120 <= max && pos + 120 >= min) {
             selectors.id.css(
               "background-image",
               "url(" +
