@@ -41,13 +41,14 @@ class CardFlip extends Component {
                         
                         <Card onClick={this.handleClick} className="front bio-card">
                             <Card.Img variant="top" src={becky_headshot} />
+                            <Card.Title>Rebecca Lynn Cunningham</Card.Title>
                             {/* <button onClick={this.handleClick}>Click to flip</button> */}
                         </Card>
                 
                         <Card onClick={this.handleClick} className="back bio-card">
                             <Card.Body>
                                 <Card.Title>Rebecca Lynn Cunningham</Card.Title>
-                                <Card.Text>
+                                {/* <Card.Text>
                                     <p>fiancee: &#123;</p>
                                     <p>occupation: Web Developer;</p>
                                     <p>age: 27;</p>
@@ -55,7 +56,7 @@ class CardFlip extends Component {
                                     <p>jokes: puns;</p>
                                     <p>strength: love;</p>
                                     <p>&#125;</p> 
-                                </Card.Text>
+                                </Card.Text> */}
                             </Card.Body>
                         </Card>
                     </ReactCardFlip>
@@ -66,12 +67,13 @@ class CardFlip extends Component {
                     <ReactCardFlip jamesFlipped={this.state.jamesFlipped} flipDirection="vertical">
                         <Card onClick={this.handleClick} className="front bio-card">
                             <Card.Img variant="top" src={james_headshot} />
+                            <Card.Title>James Powell Cowart</Card.Title>
                         </Card>
                 
                         <Card onClick={this.handleClick} className="back bio-card">
                             <Card.Body>
                                 <Card.Title>James Powell Cowart</Card.Title>
-                                <Card.Text>
+                                {/* <Card.Text>
                                     <p>fiance: &#123;</p>
                                     <p>occupation: Web Developer;</p>
                                     <p>age: 30;</p>
@@ -79,7 +81,7 @@ class CardFlip extends Component {
                                     <p>jokes: movie references;</p>
                                     <p>strength: honesty;</p>
                                     <p>&#125;</p>
-                                </Card.Text>
+                                </Card.Text> */}
                             </Card.Body>
                         </Card>
                     </ReactCardFlip>
