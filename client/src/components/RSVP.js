@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 // import React, { Component } from "react";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import fs from "fs";

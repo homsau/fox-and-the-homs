@@ -42,21 +42,21 @@ class CardFlip extends Component {
                         <Card onClick={this.handleClick} className="front bio-card">
                             <Card.Img variant="top" src={becky_headshot} />
                             <Card.Title>Rebecca Lynn Cunningham</Card.Title>
-                            {/* <button onClick={this.handleClick}>Click to flip</button> */}
+                            <button onClick={this.handleClick}>Click to flip</button>
                         </Card>
                 
                         <Card onClick={this.handleClick} className="back bio-card">
                             <Card.Body>
                                 <Card.Title>Rebecca Lynn Cunningham</Card.Title>
-                                {/* <Card.Text>
-                                    <p>fiancee: &#123;</p>
-                                    <p>occupation: Web Developer;</p>
-                                    <p>age: 27;</p>
-                                    <p>birthday: June 10;</p>
+                                <Card.Text>
+                                    fiancee: &#123;
+                                    occupation: Web Developer;
+                                    age: 27;
+                                    {/* <p>birthday: June 10;</p>
                                     <p>jokes: puns;</p>
                                     <p>strength: love;</p>
-                                    <p>&#125;</p> 
-                                </Card.Text> */}
+                                    <p>&#125;</p>  */}
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </ReactCardFlip>
