@@ -91,7 +91,7 @@ class App extends React.Component {
           <div>
             <div className='container-fluid d-flex py-4 justify-content-around'>
     ​
-              <>
+              <div>
                 <Button variant="primary" onClick={() => this.setState({RSVPmodalShow: true})} className='align-self-center'>
                   RSVP
                 </Button>
@@ -100,9 +100,11 @@ class App extends React.Component {
                   show={this.state.RSVPmodalShow}
                   onHide={() => this.setState({RSVPmodalShow: false})}
                 />
-              </>
+              </div>
+                
+
     ​
-              <>
+              <div>
                 <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
                   Registry
                 </Button>
@@ -111,7 +113,7 @@ class App extends React.Component {
                   show={this.state.modalShow}
                   onHide={() => this.setState({modalShow: false})}
                 />
-              </>
+              </div>
             </div>
             {/* <div>
               <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>

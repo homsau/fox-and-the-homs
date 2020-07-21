@@ -13,7 +13,7 @@ function RSVPVerticallyCenteredModal(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
+            RSVP
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
