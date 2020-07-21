@@ -2,7 +2,6 @@ import React from 'react';
 // import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-// import logo from './logo.svg';
 import hdr_home from './images/hdr_home.jpg';
 // import hdr_james_becks from './images/hdr_james_becks.png';
 import about_us_banner from './images/about_us_banner.jpg';
@@ -37,7 +36,8 @@ import Hero from './components/Hero.js';
 import Countdown from './components/Countdown.js';
 import CardFlip from './components/CardFlip.js';
 import { Button, Card, Col, Row, Container } from 'react-bootstrap';
-// import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
+import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
+import RSVPVerticallyCenteredModal from './components/RSVPVerticallyCenteredModal.js';
 // import RSVP from './components/RSVP.js';
 import TestForm from './components/TestForm.js';
 // import './App.css';
@@ -49,7 +49,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       live: false,
-      modalShow: false
+      modalShow: false,
+      RSVPmodalShow: false
     }
   }
 
@@ -87,13 +88,36 @@ class App extends React.Component {
             </div>
           </div>
           
-          <div className='hero-row container-fluid d-flex justify-content-center'>
-            <div>
-              <AnchorLink href='#rsvp'><Button className='align-self-center'>RSVP</Button></AnchorLink>
+          <div>
+            <div className='container-fluid d-flex py-4 justify-content-around'>
+    ​
+              <div>
+                <Button variant="primary" onClick={() => this.setState({RSVPmodalShow: true})} className='align-self-center'>
+                  RSVP
+                </Button>
+          ​
+                <RSVPVerticallyCenteredModal
+                  show={this.state.RSVPmodalShow}
+                  onHide={() => this.setState({RSVPmodalShow: false})}
+                />
+              </div>
+                
+
+    ​
+              <div>
+                <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
+                  Registry
+                </Button>
+          ​
+                <VerticallyCenteredModal
+                  show={this.state.modalShow}
+                  onHide={() => this.setState({modalShow: false})}
+                />
+              </div>
             </div>
-            <div>
+            {/* <div>
               <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
-            </div>
+            </div> */}
           </div>
         </div>
         

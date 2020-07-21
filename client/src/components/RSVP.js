@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 // import React, { Component } from "react";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import fs from "fs";
@@ -12,7 +12,8 @@ export default class RSVP extends React.Component {
         }
     }
 
-    handleSubmit() {
+    handleSubmit(event) {
+        event.preventDefault();
         // Next, we store the text given to us from the command line.
         let text;
 
@@ -28,6 +29,9 @@ export default class RSVP extends React.Component {
         // If no error is experienced, we'll log the phrase "Content Added" to our node console.
         else {
             console.log("Content Added!");
+            this.setState({
+                submitted: true
+            })
         }
 
         });
@@ -38,16 +42,16 @@ export default class RSVP extends React.Component {
         return(
             <div>
                 <Form className="d-flex flex-column align-items-left" onSubmit={this.handleSubmit}>
-                <Form.Group as={Row} controlId="formHorizontalName">
-                    <Form.Label column sm={2}>
-                    Names of Attendees
-                    </Form.Label>
-                    <Col sm={10}>
-                    <Form.Control type="name" placeholder="Names of all Attendees" />
-                    </Col>
-                </Form.Group>
+                    <Form.Group as={Row} id="formHorizontalName">
+                        <Form.Label column sm={2}>
+                        Names of Attendees
+                        </Form.Label>
+                        <Col sm={10}>
+                        <Form.Control type="name" placeholder="Names of all Attendees" />
+                        </Col>
+                    </Form.Group>
 
-                    <Form.Group as={Row} controlId="formHorizontalPassword">
+                    <Form.Group as={Row} id="formHorizontalPassword">
                         <Form.Label column sm={2}>
                         Number of Attendees
                         </Form.Label>
@@ -58,7 +62,7 @@ export default class RSVP extends React.Component {
                             id="inlineFormCustomSelectPref"
                             custom
                         >
-                            <option selected>Choose...</option>
+                            <option defaultValue>Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -103,7 +107,7 @@ export default class RSVP extends React.Component {
                         </Col>
                         </Form.Group>
                     </fieldset>
-                    <Form.Group as={Row} controlId="formHorizontalCheck">
+                    <Form.Group as={Row} id="formHorizontalCheck">
                         <Col sm={{ span: 10, offset: 2 }}>
                         <Form.File id="exampleFormControlFile1" label="Resume (not required, but encouraged)" />
                         </Col>
