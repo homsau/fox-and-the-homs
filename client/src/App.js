@@ -104,9 +104,9 @@ class App extends React.Component {
       />
     </>
         </div>
-        <div>
+        {/* <div>
           <AnchorLink href='#registry'><Button className='align-self-center'>Registry</Button></AnchorLink>
-        </div>
+        </div> */}
       </div>
 
       <img id='about_us' src={about_us_banner} alt="..."/>

@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import './index.css';
+import './fonts/Nickainley-Normal.ttf';
+import './fonts/Tangerine-Bold.ttf';
+import './fonts/Tangerine-Regular.ttf';
+import './fonts/Vacations Brush.ttf';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

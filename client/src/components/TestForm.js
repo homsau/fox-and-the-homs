@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
+// import React, { Component } from "react";
+
 import { Form, Row, Col, Button } from 'react-bootstrap';
 
 export default class RSVP extends React.Component {
@@ -26,7 +28,8 @@ export default class RSVP extends React.Component {
         return(
             <div>
                 <Form onSubmit={this.handleInputChange} className="d-flex flex-column align-items-left">
-                    <Form.Group as={Row} controlId="formHorizontalName">
+                    {/* <Form.Group as={Row} controlId="formHorizontalName"> */}
+                    <Form.Group as={Row}>
                         <Form.Label column sm={2}>
                         Names of Attendees
                         </Form.Label>
@@ -35,7 +38,8 @@ export default class RSVP extends React.Component {
                         </Col>
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formHorizontalPassword">
+                    {/* <Form.Group as={Row} controlId="formHorizontalName"> */}
+                    <Form.Group as={Row}>
                         <Form.Label column sm={2}>
                         Number of Attendees
                         </Form.Label>
@@ -46,7 +50,7 @@ export default class RSVP extends React.Component {
                             id="inlineFormCustomSelectPref"
                             custom
                         >
-                            <option selected>Choose...</option>
+                            <option>Choose...</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

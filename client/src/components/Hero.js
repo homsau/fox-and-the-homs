@@ -5,7 +5,7 @@ import classNames from "classnames";
 export default class Hero extends React.Component {
 
 //   static propTypes = {
-//     backgroundImage: React.PropTypes.string,
+//     backgroundimage: React.PropTypes.string,
 //   };
 
   render() {
@@ -13,8 +13,9 @@ export default class Hero extends React.Component {
         marginBottom: 0,
 
     };
-    if (this.props.backgroundImage) {
-      _style.backgroundImage = `url(${this.props.backgroundImage})`;
+    if (this.props.backgroundimage) {
+      _style.backgroundImage = `url(${this.props.backgroundimage})`;
+      // _style.backgroundImage needs the capital "I". naming variables with the capital "I" causes warnings
     }
     const _className = classNames("neal-hero jumbotron jumbotron-fluid", this.props.className);
     return (
