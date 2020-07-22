@@ -16,7 +16,6 @@ import boots from './images/boots.jpg';
 import beach_feet from './images/beach_feet.jpg';
 import gt_image from './images/gt_image.jpg';
 import gt_graduation_night from './images/gt_graduation_night.jpg'; // front pic
-// import first_app from './images/first_app.jpg'; // front pic
 import amicalola from './images/amicalola.jpg'; // front pic
 import daffodils from './images/daffodils.jpg'; // front pic
 import moulin_rouge from './images/moulin_rouge.jpg'; // front pic
@@ -24,12 +23,6 @@ import surprise_party from './images/surprise_party.jpg'; // front pic
 import birthday_flowers from './images/birthday_flowers.jpg'; // front pic
 import vday from './images/vday.jpg'; // front pic
 import engaged from './images/engaged.jpg'; // front pic
-// import lunar_eclipse from './images/lunar_eclipse.jpg'; // bg pic
-import amazon from './images/amazon.png';
-import bed_bath_beyond from './images/bed_bath_beyond.png';
-import dillards from './images/dillards.png';
-import lowes from './images/lowes.png';
-// import williams_sonoma from './images/williams_sonoma.png';
 
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
@@ -39,7 +32,7 @@ import { Button, Card, Col, Row, Container } from 'react-bootstrap';
 import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVPVerticallyCenteredModal from './components/RSVPVerticallyCenteredModal.js';
 // import RSVP from './components/RSVP.js';
-import TestForm from './components/TestForm.js';
+// import TestForm from './components/TestForm.js';
 // import './App.css';
 import './App.scss';
 
@@ -83,17 +76,21 @@ class App extends React.Component {
         <div id='countdown' className="section">
           <div className='hero-menu'>
             <div className='container-fluid countdown-container'>
-              <h2 className='title'>Countdown</h2>
+              <h3 className='title'>Countdown to</h3>
+              <h2 className='title'>October 10th, 2020</h2>
               <Countdown />
             </div>
           </div>
-          
+        </div>
+
+        <div id='buttons' className="section">
           <div>
             <div className='container-fluid d-flex py-4 justify-content-around'>
-    ​
               <div>
-                <Button variant="primary" onClick={() => this.setState({RSVPmodalShow: true})} className='align-self-center'>
-                  RSVP
+                <Button variant="primary" onClick={() => this.setState({RSVPmodalShow: true})} className='main_button align-self-center'>
+                  <div>
+                    RSVP
+                  </div>
                 </Button>
           ​
                 <RSVPVerticallyCenteredModal
@@ -101,14 +98,13 @@ class App extends React.Component {
                   onHide={() => this.setState({RSVPmodalShow: false})}
                 />
               </div>
-                
-
-    ​
               <div>
-                <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
-                  Registry
+                <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='main_button align-self-center'>
+                  <div>
+                    Registry
+                  </div>
                 </Button>
-          ​
+                
                 <VerticallyCenteredModal
                   show={this.state.modalShow}
                   onHide={() => this.setState({modalShow: false})}
@@ -282,58 +278,12 @@ class App extends React.Component {
                       </div>
                   </div>
               </div>
+              <br />
+              <br />
+              <h2 style={{'color': 'white'}}>Thanks for stopping by!</h2>
           </div>
       </div>
 
-      <div id='registry' className='registry container-fluid registry section'>
-        <h2>Registry</h2>
-        <div className='container-fluid d-flex py-4 justify-content-around align-items-center'>
-          <Container>
-            <Row className="justify-content-md-center">
-              <Col xs={6} md={3}>
-                <a target='_blank' rel='noopener noreferrer' href='www.jamesandbecks.us/#'>
-                  <Card>
-                    <Card.Img variant="top" src={amazon} />
-                  </Card>
-                </a>
-              </Col>
-              <Col xs={6} md={3}>
-                <a target='_blank' rel='noopener noreferrer' href='https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549077696?eventType=Wedding'>
-                  <Card>
-                    <Card.Img variant="top" src={bed_bath_beyond} />
-                  </Card>
-                </a>
-              </Col>
-              <Col xs={6} md={3}>
-                <a target='_blank' rel='noopener noreferrer' href='https://www.dillards.com/webapp/wcs/stores/servlet/RegistryManageProducts?catalogId=301&langId=-1&storeId=301&actionCode=M&registryNumber=132821638'>
-                  <Card>
-                    <Card.Img variant="top" src={dillards} />
-                  </Card>
-                </a>
-              </Col>
-              <Col xs={6} md={3}>
-                <a target='_blank' rel='noopener noreferrer' href='www.jamesandbecks.us/#'>
-                  <Card>
-                    <Card.Img variant="top" src={lowes} />
-                  </Card>
-                </a>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </div>
-
-      <div id='rsvp' className='container-fluid rsvp section'>
-        <h2>RSVP</h2>
-        <a href="mailto:rebeccalynn.awesome@gmail.com">Send us an email because we don't have the form set up yet.</a>
-        <TestForm />
-        {/* <RSVP /> */}
-      </div>
-
-      <div className='container-fluid favorites section'>
-        <h2>Our Faves</h2>
-
-      </div>
     </div>
 
     );

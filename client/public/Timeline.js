@@ -20,9 +20,8 @@
       $(window).scroll(function() {
         var max, min;
         $(document).click(function(event) {
-          console.log("max: " + max);
-          console.log("min: " + min);
-          console.log("itemLength: " + itemLength);
+          // console.log("max: " + max);
+          // console.log("min: " + min);
         });
         var pos = $(this).scrollTop();
         selectors.item.each(function(i) {
