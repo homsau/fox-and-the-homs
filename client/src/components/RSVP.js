@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import React, { Component } from "react";
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 // import env, { config } from "dotenv";
 // config(env);
 
@@ -134,21 +134,21 @@ export default class RSVP extends React.Component {
                                 type="radio"
                                 label="Happily Accept"
                                 name="formHorizontalRadios"
-                                id="HappilyAccept"
+                                id="Happily Accept"
                                 onChange={this.handleInputChange}
                                 />
                                 <Form.Check
                                 type="radio"
                                 label="Regretfully Decline"
                                 name="formHorizontalRadios"
-                                id="RegretfullyDecline"
+                                id="Regretfully Decline"
                                 onChange={this.handleInputChange}
                                 />
                                 <Form.Check
                                 type="radio"
                                 label="Regretfully Accept"
                                 name="formHorizontalRadios"
-                                id="fRegretfully Accept"
+                                id="Regretfully Accept"
                                 onChange={this.handleInputChange}
                                 />
                                 <Form.Check

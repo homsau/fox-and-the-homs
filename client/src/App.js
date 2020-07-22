@@ -16,7 +16,6 @@ import boots from './images/boots.jpg';
 import beach_feet from './images/beach_feet.jpg';
 import gt_image from './images/gt_image.jpg';
 import gt_graduation_night from './images/gt_graduation_night.jpg'; // front pic
-// import first_app from './images/first_app.jpg'; // front pic
 import amicalola from './images/amicalola.jpg'; // front pic
 import daffodils from './images/daffodils.jpg'; // front pic
 import moulin_rouge from './images/moulin_rouge.jpg'; // front pic
@@ -24,12 +23,6 @@ import surprise_party from './images/surprise_party.jpg'; // front pic
 import birthday_flowers from './images/birthday_flowers.jpg'; // front pic
 import vday from './images/vday.jpg'; // front pic
 import engaged from './images/engaged.jpg'; // front pic
-// import lunar_eclipse from './images/lunar_eclipse.jpg'; // bg pic
-// import amazon from './images/amazon.png';
-// import bed_bath_beyond from './images/bed_bath_beyond.png';
-// import dillards from './images/dillards.png';
-// import lowes from './images/lowes.png';
-// import williams_sonoma from './images/williams_sonoma.png';
 
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
@@ -39,7 +32,7 @@ import { Button, Card, Col, Row, Container } from 'react-bootstrap';
 import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVPVerticallyCenteredModal from './components/RSVPVerticallyCenteredModal.js';
 // import RSVP from './components/RSVP.js';
-import TestForm from './components/TestForm.js';
+// import TestForm from './components/TestForm.js';
 // import './App.css';
 import './App.scss';
 
@@ -83,16 +76,21 @@ class App extends React.Component {
         <div id='countdown' className="section">
           <div className='hero-menu'>
             <div className='container-fluid countdown-container'>
-              <h2 className='title'>Countdown</h2>
+              <h3 className='title'>Countdown to</h3>
+              <h2 className='title'>October 10th, 2020</h2>
               <Countdown />
             </div>
           </div>
-          
+        </div>
+
+        <div id='buttons' className="section">
           <div>
             <div className='container-fluid d-flex py-4 justify-content-around'>
               <div>
-                <Button variant="primary" onClick={() => this.setState({RSVPmodalShow: true})} className='align-self-center'>
-                  RSVP
+                <Button variant="primary" onClick={() => this.setState({RSVPmodalShow: true})} className='main_button align-self-center'>
+                  <div>
+                    RSVP
+                  </div>
                 </Button>
           ​
                 <RSVPVerticallyCenteredModal
@@ -101,9 +99,12 @@ class App extends React.Component {
                 />
               </div>
               <div>
-                <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='align-self-center'>
-                  Registry
+                <Button variant="primary" onClick={() => this.setState({modalShow: true})} className='main_button align-self-center'>
+                  <div>
+                    Registry
+                  </div>
                 </Button>
+                
                 <VerticallyCenteredModal
                   show={this.state.modalShow}
                   onHide={() => this.setState({modalShow: false})}
