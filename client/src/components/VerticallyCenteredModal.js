@@ -9,6 +9,7 @@ function VerticallyCenteredModal(props) {
     return (
       <Modal
         {...props}
+        className="registry-icons"
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered

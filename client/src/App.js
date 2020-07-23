@@ -6,14 +6,16 @@ import hdr_home from './images/hdr_home.jpg';
 // import hdr_james_becks from './images/hdr_james_becks.png';
 import about_us_banner from './images/about_us_banner.jpg';
 // OUR PICS
+import about_us_green from './images/about_us_green.jpg';
 // import james_headshot from './images/james_headshot.jpg';
-// import becky_headshot from './images/becky_headshot.jpg';
+import becky_headshot from './images/becky_headshot.jpg';
 // FUR BABIES
 import evey from './images/evey.jpg';
 import oliver from './images/oliver.jpg';
 import simon from './images/simon.jpg';
 import boots from './images/boots.jpg';
 import beach_feet from './images/beach_feet.jpg';
+// import green_bg from './images/green_bg.jpg';
 import gt_image from './images/gt_image.jpg';
 import gt_graduation_night from './images/gt_graduation_night.jpg'; // front pic
 import amicalola from './images/amicalola.jpg'; // front pic
@@ -22,12 +24,15 @@ import moulin_rouge from './images/moulin_rouge.jpg'; // front pic
 import surprise_party from './images/surprise_party.jpg'; // front pic
 import birthday_flowers from './images/birthday_flowers.jpg'; // front pic
 import vday from './images/vday.jpg'; // front pic
+import becky_wine from './images/becky_wine.gif';
+import becky_gif from './images/becky_gif.gif';
+import james_gif from './images/james_gif.gif';
 import engaged from './images/engaged.jpg'; // front pic
 
 import Hero from './components/Hero.js';
 //import HorizontalSplit from './components/HorizontalSplit.js';
 import Countdown from './components/Countdown.js';
-import CardFlip from './components/CardFlip.js';
+// import CardFlip from './components/CardFlip.js';
 import { Button, Card, Col, Row, Container } from 'react-bootstrap';
 import VerticallyCenteredModal from './components/VerticallyCenteredModal.js';
 import RSVPVerticallyCenteredModal from './components/RSVPVerticallyCenteredModal.js';
@@ -122,7 +127,85 @@ class App extends React.Component {
         <div className='container-fluid about-us section'>
           {/* <h2>About Us</h2> */}
           <div className='container-fluid d-flex justify-content-around align-items-center'>
-            <CardFlip />
+            <Container>
+              <Row className="justify-content-md-center top-bio section">
+                <Col>
+                  <h2>About Us</h2>
+                  <Card.Img variant="top" src={about_us_green} />
+                </Col>
+              </Row>
+              <Row className="justify-content-md-center">
+                <Col className="bio-card section" xs={12} md={6}>
+                  <h2>The Bride</h2>
+                  <Card>
+                    <Card.Img variant="top" src={becky_gif} />
+                    <Card.Title>Rebecca Lynn Cunningham</Card.Title>
+                    <Card.Body>
+                      <Card.Text>
+                        fiancee: &#123;
+                        occupation: Web Developer;
+                        age: 27;
+                        {/* <p>birthday: June 10;</p>
+                        <p>jokes: puns;</p>
+                        <p>strength: love;</p>
+                        <p>&#125;</p>  */}
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col className="bio-card section" xs={12} md={6}>
+                  <h2>The Groom</h2>
+                  <Card>
+                    <Card.Img variant="top" src={james_gif} />
+                    <Card.Title>James Powell Cowart</Card.Title>
+                    <Card.Body>
+                      <Card.Text>
+                        fiance: &#123;
+                        occupation: Web Developer
+                        age: 30;
+                          {/* <p>birthday: June 10;</p>
+                          <p>jokes: puns;</p>
+                          <p>strength: love;</p>
+                          <p>&#125;</p>  */}
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              {/* <Row className="justify-content-md-center">
+                <Col>
+                  <h2>About the Bride</h2>
+                  <Card className="front bio-card">
+                    <Card.Img variant="top" src={becky_wine} />
+                    <Card.Title>Rebecca Lynn Cunningham</Card.Title>
+                    <Card.Body>
+                      <Card.Text>
+                        fiancee: &#123;
+                        occupation: Web Developer;
+                        age: 27;
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card.Img variant="top" src={about_us_green} />
+                </Col>
+                <Col>
+                  <h2>About the Groom</h2>
+                  <Card className="front bio-card">
+                    <Card.Title>James Powell Cowart</Card.Title>
+                    <Card.Body>
+                      <Card.Text>
+                        fiance: &#123;
+                        occupation: Web Developer
+                        age: 30;
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row> */}
+            </Container>
+            {/* <CardFlip /> */}
           </div>
         </div>
 
