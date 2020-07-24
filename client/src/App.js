@@ -131,14 +131,14 @@ class App extends React.Component {
               <Row className="justify-content-md-center top-bio section">
                 <Col>
                   <h2>About Us</h2>
-                  <Card.Img variant="top" src={about_us_green} />
+                  <Card.Img id="bg_photo" variant="top" src={about_us_green} />
                 </Col>
               </Row>
               <Row className="justify-content-md-center">
                 <Col className="bio-card section" xs={12} md={6}>
                   <h2>The Bride</h2>
                   <Card>
-                    <Card.Img variant="top" src={becky_gif} />
+                    <Card.Img variant="top" src={becky_wine} />
                     <Card.Title>Rebecca Lynn Cunningham</Card.Title>
                     <Card.Body>
                       <Card.Text>
@@ -363,7 +363,7 @@ class App extends React.Component {
               </div>
               <br />
               <br />
-              <h2 style={{'color': 'white'}}>Thanks for stopping by!</h2>
+              <h2 style={{'color': 'white', 'position': 'relative'}}>Thanks for stopping by!</h2>
           </div>
       </div>
 
